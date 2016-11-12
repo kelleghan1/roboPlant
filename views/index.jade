@@ -1,11 +1,8 @@
 extends layout
 
 block content
-  a(href="/insert_data") Insert
+
   h1= title
-  p Checking #{test1}
-
-h1 testing
-
-
-a(href="/insert_data") Insert
+  p Checking #{test1};
+  h1 testing
+  a(type="submit" href="/sensor_post" method="POST" action="/sensor_post") Insert
