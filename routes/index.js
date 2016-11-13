@@ -51,6 +51,40 @@ router.get('/test1', function(req, res) {
 
 });
 
+router.post("/post_data/:data", function(req, res){
+    var db = req.db;
+    var collection = db.get('usercollection');
+    var sensorRequest = req.params.data;
+    console.log('************', sensorRequest);
+    // console.log("###############", req);
+    collection.insert(JSON.parse(sensorRequest), function(e,success){
+
+	console.log("ERROR",e);
+
+
+    });
+
+    return;
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //incompleate!!!!
 
 
